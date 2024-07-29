@@ -1,8 +1,6 @@
 # LeetCode-JS-in-30-days
 
-# LeetCode JS in 30 Days
-
-![LeetCode JS in 30 Days](https://img.shields.io/badge/LeetCode-JS--in--30--Days-blue)
+![LeetCode JS in 30 Days](https://leetcode.com/studyplan/30-days-of-javascript/)
 
 Welcome to the **LeetCode JS in 30 Days** challenge! This repository contains my journey of solving LeetCode problems using JavaScript over 30 days.
 
@@ -21,30 +19,21 @@ The goal of this challenge is to improve my problem-solving skills in JavaScript
 
 ## Problem List
 
-1. [Day 1: Two Sum](#day-1-two-sum)
-2. [Day 2: Add Two Numbers](#day-2-add-two-numbers)
-3. [Day 3: Longest Substring Without Repeating Characters](#day-3-longest-substring-without-repeating-characters)
+1. [Day 1:Create Hello world](#day-1-Create-Hello-world)
+2. [Day 2: Closure](#day-2-Closure)
+3. [Day 3: To Be Or Not To Be](#day-3-To-Be-Or-Not-To-Be)
 4. [Day 4: Median of Two Sorted Arrays](#day-4-median-of-two-sorted-arrays)
 5. [Day 5: Longest Palindromic Substring](#day-5-longest-palindromic-substring)
 <!-- Add more days as needed -->
 
 ## Solutions
 
-### Day 1: Two Sum
+### Day 1: Create Hello world
 
-**Problem:** Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+**Problem:** Create Hello world
 
 **Solution:**
 
 ```javascript
-var twoSum = function (nums, target) {
-  let map = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    let complement = target - nums[i];
-    if (map.has(complement)) {
-      return [map.get(complement), i];
-    }
-    map.set(nums[i], i);
-  }
-};
+// Do it YourSelf
 ```
