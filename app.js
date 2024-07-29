@@ -1,6 +1,6 @@
 // Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
 
- 
+
 
 // Example 1:
 
@@ -46,7 +46,7 @@ const run = createStepCounter(3, 3)
 // console.log(run());
 
 
- 
+
 
 
 
@@ -63,7 +63,7 @@ const run = createStepCounter(3, 3)
 
 // toBe(val) accepts another value and returns true if the two values === each other. If they are not equal, it should throw an error "Not Equal".
 // notToBe(val) accepts another value and returns true if the two values !== each other. If they are equal, it should throw an error "Equal".
- 
+
 
 // Example 1:
 
@@ -86,3 +86,28 @@ const run = createStepCounter(3, 3)
 //                              Answer
 
 
+
+var expect = function (val) {
+    let ans = val
+    return {
+        toBe: function (expected) {
+            if (expected === ans) {
+                return true;
+            } else return ("Not Equal")
+        },
+        notToBe: function (expected) {
+            if (expected !== ans) {
+                return true;
+            } else return ("Equal")
+        }
+
+
+    }
+
+
+};
+
+console.log(expect(34).toBe(3));
+console.log(expect(3).toBe(3));
+console.log(expect(null).toBe(3));
+console.log(expect(null).toBe(null));
