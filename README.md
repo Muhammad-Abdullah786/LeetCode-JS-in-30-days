@@ -22,7 +22,7 @@ The goal of this challenge is to improve my problem-solving skills in JavaScript
 1. [Day 1:Create Hello world](#day-1-Create-Hello-world)
 2. [Day 2: Closure](#day-2-Closure)
 3. [Day 3: To Be Or Not To Be](#day-3-To-Be-Or-Not-To-Be)
-4. [Day 4: Median of Two Sorted Arrays](#day-4-median-of-two-sorted-arrays)
+4. [Day 4: Counter 2](#day-4-Counter-2)
 5. [Day 5: Longest Palindromic Substring](#day-5-longest-palindromic-substring)
 <!-- Add more days as needed -->
 
@@ -59,7 +59,7 @@ const createDecementCounter = (n) => {
 //        Answer in Repo
 ```
 
-### Day 1: To Be Or Not To Be
+### Day 3: To Be Or Not To Be
 
 **Problem:**Write a function expect that helps developers test their code. It should take in any value val and return an object with the following two functions.
 
@@ -102,4 +102,34 @@ var expect = function (val) {
 
 // isEqualTo(val): Accepts another value and returns true if the two values == each other. If they are not equal, it should throw an error "Values are not equal".
 // isGreaterThan(val): Accepts another value and returns true if the initial value is greater than the argument. If it is not, it should throw an error "Initial value is not greater".
+```
+
+### Day 4: To Be Or Not To Be
+
+**Problem:**Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+
+**Solution:**
+
+```javascript
+const createCounter = (initial) => {
+  let counter = initial;
+  return {
+    increment: () => {
+      counter++;
+      return counter;
+    },
+    reset: () => {
+      return (counter = initial);
+    },
+    decrement: () => {
+      counter--;
+      return counter;
+    },
+  };
+};
+let start = createCounter(5);
+console.log(start.increment()); // 6
+console.log(start.increment()); // 6
+console.log(start.reset()); // 5
+console.log(start.decrement()); // 4;
 ```
