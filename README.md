@@ -37,3 +37,24 @@ The goal of this challenge is to improve my problem-solving skills in JavaScript
 ```javascript
 // Do it YourSelf
 ```
+
+### Day 2: Closure
+
+**Problem:** Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc)
+
+**Solution:**
+
+```javascript
+const createDecementCounter = (n) => {
+  let counter = n;
+  return function () {
+    return counter--;
+  };
+};
+
+// For practice Purpose
+
+// Create a counter function that takes an initial value start and a step value step. The counter function should start at start and increase by step with each call.
+
+//        Answer in Repo
+```
