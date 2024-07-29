@@ -107,7 +107,82 @@ var expect = function (val) {
 
 };
 
-console.log(expect(34).toBe(3));
-console.log(expect(3).toBe(3));
-console.log(expect(null).toBe(3));
-console.log(expect(null).toBe(null));
+// console.log(expect(34).toBe(3));
+// console.log(expect(3).toBe(3));
+// console.log(expect(null).toBe(3));
+// console.log(expect(null).toBe(null));
+
+
+
+
+
+
+
+
+
+
+
+
+//                               Problem:
+// Write a function assert that helps developers test their code. It should take in any value val and return an object with the following two functions:
+
+// isEqualTo(val): Accepts another value and returns true if the two values == each other. If they are not equal, it should throw an error "Values are not equal".
+// isGreaterThan(val): Accepts another value and returns true if the initial value is greater than the argument. If it is not, it should throw an error "Initial value is not greater".
+
+
+//                   ANSWER
+
+
+
+const Assert = (value) => {
+    let expected = value;
+    return {
+        isEquatTo: function (val) {
+            if (val === expected) {
+                return true;
+            } else throw "values are not equal"
+        },
+        isGreaterThan: function (val) {
+            if (val > expected) {
+                return true;
+            } else throw "initail value is not greater"
+        }
+    }
+}
+
+
+
+
+
+
+// Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+
+// The three functions are:
+
+// increment() increases the current value by 1 and then returns it.
+// decrement() reduces the current value by 1 and then returns it.
+// reset() sets the current value to init and then returns it.
+
+
+//                                ANSWER
+
+const createCounter = (initial) => {
+    let counter = initial;
+    return {
+        increment: () => {
+            counter++;
+            return counter;
+        },
+        reset: () => { return counter = initial },
+        decrement: () => {
+            counter--;
+            return counter
+        }
+    }
+
+}
+let start = createCounter(5)
+console.log(start.increment()) // 6
+console.log(start.increment()) // 6
+console.log(start.reset()) // 5
+console.log(start.decrement()) // 4;
